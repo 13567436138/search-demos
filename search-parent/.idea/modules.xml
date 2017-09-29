@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/search-parent.iml" filepath="$PROJECT_DIR$/search-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solr-demo/solr-demo.iml" filepath="$PROJECT_DIR$/solr-demo/solr-demo.iml" />
     </modules>
   </component>
 </project>

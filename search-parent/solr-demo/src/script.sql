@@ -45,6 +45,8 @@ insert into menu(pid,menuName,menuDesc,`link`,`order`)values((select a.menuId fr
 
 insert into menu(pid,menuName,menuDesc,`link`,`order`)values(-1,'mq消息','mq消息',null,1);
 insert into menu(pid,menuName,menuDesc,`link`,`order`)values((select a.menuId from (select menuId from menu where menuName='mq消息')a),'activemq消息','activemq消息','/admins/message/list',1);
+insert into menu(pid,menuName,menuDesc,`link`,`order`)values(-1,'搜索','搜索',null,1);
+insert into menu(pid,menuName,menuDesc,`link`,`order`)values((select a.menuId from (select menuId from menu where menuName='搜索')a),'solr搜索','solr搜索','/admins/search/solr/list',1);
 
 -- ----------------------------
 -- Table structure for menu_role

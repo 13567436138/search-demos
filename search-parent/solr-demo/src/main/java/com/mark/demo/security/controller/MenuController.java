@@ -1,18 +1,17 @@
 package com.mark.demo.security.controller;
 
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.mark.demo.security.base.PaginateResult;
+import com.mark.demo.security.base.Pagination;
+import com.mark.demo.security.entity.Menu;
+import com.mark.demo.security.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.mark.demo.security.base.PaginateResult;
-import com.mark.demo.security.base.Pagination;
-import com.mark.demo.security.entity.Menu;
-import com.mark.demo.security.service.MenuService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /*
 *hxp(hxpwangyi@126.com)
@@ -45,7 +44,8 @@ public class MenuController {
 	}
 	
 	@RequestMapping("/list")
-	public String list(){
+	public String list(HttpServletResponse response){
+		response.setHeader("X-Frame-Options","SAMEORIGHT");
 		return "admins/system/menu.ftl";
 	}
 	

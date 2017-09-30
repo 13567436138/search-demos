@@ -128,7 +128,7 @@
                 <value>*.ftl</value>  
             </array>  
         </property>  
-        <property name="cache" value="true" /> 
+        <property name="cache" value="false" />
         <property name="contentType" value="text/html; charset=UTF-8" />  
         <property name="exposeRequestAttributes" value="true" />  
         <property name="exposeSessionAttributes" value="true" />  

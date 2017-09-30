@@ -7,7 +7,7 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:cache="http://www.springframework.org/schema/cache"
        xsi:schemaLocation="http://www.springframework.org/schema/data/solr
-       http://www.springframework.org/schema/data/solr/spring-solr-1.0.xsd
+       http://www.springframework.org/schema/data/solr/spring-solr-2.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
@@ -17,11 +17,12 @@
 
     <context:property-placeholder location="classpath:configuration.properties" ignore-resource-not-found="true" />
 
-    <solr:solr-server id="solrServer" url="${solr.host}" />
+    <solr:solr-client id="solrClient" url="${solr.host}" maxConnections="100" timeout="1000" />
 
     <bean id="solrTemplate" class="org.springframework.data.solr.core.SolrTemplate" scope="singleton">
-        <constructor-arg ref="solrServer" />
+        <constructor-arg ref="solrClient" />
     </bean>
+    <solr:repositories base-package="com.mark.demo.security.repsitory" multicore-support="true" solr-template-ref="solrTemplate" />
 
 
 </beans>

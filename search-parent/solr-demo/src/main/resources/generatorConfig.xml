@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE generatorConfiguration PUBLIC   
+"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >  
+<generatorConfiguration>  
+    <classPathEntry  
+        location="D:\maven\rep\mysql\mysql-connector-java\5.1.42\mysql-connector-java-5.1.42.jar" />  
+        <context id="context1" targetRuntime="MyBatis3">  
+        <commentGenerator>   
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->   
+        <property name="suppressAllComments" value="true" />   
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->   
+      </commentGenerator>   
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"  
+            connectionURL="jdbc:mysql://192.168.198.131:3306/shiro?useUnicode=true&amp;characterEncoding=UTF-8"  
+            userId="root" password="mark" />  
+        <javaModelGenerator targetPackage="com.mark.demo.security.entity"  
+            targetProject="D:\generate" />  
+        <sqlMapGenerator targetPackage="com.mark.demo.security.mapper"  
+            targetProject="D:\generate" />  
+        <javaClientGenerator targetPackage="com.mark.demo.security.mapper"  
+            targetProject="D:\generate" type="XMLMAPPER" />  
+        <!-- shema 数据库 tableName表明 -->  
+         <table schema="shiro" tableName="group" 
+         	enableCountByExample="false" 
+			enableUpdateByExample="false" 
+			enableDeleteByExample="false" 
+			enableSelectByExample="false" 
+			selectByExampleQueryId="false"/>  
+         <table schema="shiro" tableName="menu" 
+         enableCountByExample="false" 
+			enableUpdateByExample="false" 
+			enableDeleteByExample="false" 
+			enableSelectByExample="false" 
+			selectByExampleQueryId="false"/>   
+         <table schema="shiro" tableName="permission" enableCountByExample="false" 
+			enableUpdateByExample="false" 
+			enableDeleteByExample="false" 
+			enableSelectByExample="false" 
+			selectByExampleQueryId="false"/> 
+         <table schema="shiro" tableName="role" enableCountByExample="false" 
+			enableUpdateByExample="false" 
+			enableDeleteByExample="false" 
+			enableSelectByExample="false" 
+			selectByExampleQueryId="false"/> 
+         <table schema="shiro" tableName="user" enableCountByExample="false" 
+			enableUpdateByExample="false" 
+			enableDeleteByExample="false" 
+			enableSelectByExample="false" 
+			selectByExampleQueryId="false"/> 
+          
+    </context>  
+</generatorConfiguration>

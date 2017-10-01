@@ -139,3 +139,12 @@ CREATE TABLE `resource` (
   `role` varchar(100) DEFAULT NULL,
   `url` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `article`;
+CREATE TABLE `article` (
+  `articleId` int primary key auto_increment,
+  `title` varchar(200) DEFAULT NULL,
+   content varchar(1000),
+   date DATETIME
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

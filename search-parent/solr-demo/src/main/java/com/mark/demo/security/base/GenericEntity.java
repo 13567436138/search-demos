@@ -1,5 +1,9 @@
 package com.mark.demo.security.base;
 
+import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.solr.core.mapping.Indexed;
+
 import java.io.Serializable;
 
 
@@ -10,8 +14,10 @@ public abstract class GenericEntity implements Serializable {
     /**
      * 主键编号
      */
+    @Id
+    @Indexed
+    @Field("id")
     protected int id;
-
     /**
      * 删除标识
      */

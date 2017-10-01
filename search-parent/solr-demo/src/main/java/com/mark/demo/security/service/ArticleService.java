@@ -1,13 +1,13 @@
-package com.mark.demo.security.repsitory;
+package com.mark.demo.security.service;
 
+import com.mark.demo.security.base.GenericService;
 import com.mark.demo.security.entity.Article;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.solr.repository.SolrCrudRepository;
 
 /**
- * Created by admin on 2017/9/30.
+ * Created by admin on 2017/10/1.
  */
-public interface SolrRepsitory extends SolrCrudRepository<Article,String> {
+public interface ArticleService extends GenericService<Article> {
     Page<Article> findByTitleOrContent(String title, String content, Pageable pageable);
 }

@@ -9,9 +9,9 @@
     <#include "/common/common.ftl">
     <script type="text/javascript"  charset="UTF-8">
         var searchUrl = "${contextPath}/admins/search/solr/list/data";
-        var updateUrl = "${contextPath}/departments/update.do";
-        var insertUrl = "${contextPath}/departments/insert.do";
-        var deleteUrl = "${contextPath}/departments/delete.do";
+        var updateUrl = "${contextPath}/admins/search/solr/update";
+        var insertUrl = "${contextPath}/admins/search/solr/save";
+        var deleteUrl = "${contextPath}/admins/search/solr/delete";
         $(function() {
             $('#dataList').datagrid({
                 title:'列表',

@@ -19,8 +19,20 @@
 
     <solr:solr-client id="solrClient" url="${solr.host}" maxConnections="100" timeout="1000" />
 
+    <bean id="solrConverter" class="org.springframework.data.solr.core.convert.MappingSolrConverter">
+        <constructor-arg>
+            <bean class="org.springframework.data.solr.core.mapping.SimpleSolrMappingContext" />
+        </constructor-arg>
+        <property name="customConversions" ref="customConversions" />
+    </bean>
+
+    <bean id="customConversions" class="org.springframework.data.solr.core.convert.CustomConversions">
+
+    </bean>
+
     <bean id="solrTemplate" class="org.springframework.data.solr.core.SolrTemplate" scope="singleton">
         <constructor-arg ref="solrClient" />
+        <property name="solrConverter" ref="solrConverter" />
     </bean>
     <solr:repositories base-package="com.mark.demo.security.repsitory" multicore-support="true" solr-template-ref="solrTemplate" />
 

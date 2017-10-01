@@ -1,6 +1,7 @@
 package com.mark.demo.security.entity;
 
-import org.springframework.data.annotation.Id;
+import com.mark.demo.security.base.GenericEntity;
+import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
@@ -10,24 +11,16 @@ import java.util.Date;
  * Created by admin on 2017/9/30.
  */
 @SolrDocument(solrCoreName = "test")
-public class Article {
-    @Id
+public class Article extends GenericEntity{
     @Indexed
-    private String id;
-    @Indexed
+    @Field("title")
     private String title;
     @Indexed
+    @Field("content")
     private String content;
     @Indexed
+    @Field("date")
     private Date date;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;

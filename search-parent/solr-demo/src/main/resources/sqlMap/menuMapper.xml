@@ -20,10 +20,10 @@
     </resultMap>
     
     <select id="getMenuTopLever"  resultMap="menuMap" useCache="true">
-    	select * from menu where pid=-1
+    	select * from menu where pid=-1 order by menuId
     </select>
     <select id="getMenuChildren"  parameterType="int" resultMap="menuMap">
-    	select * from menu where pid=#{pid}
+    	select * from menu where pid=#{pid} order by menuId
     </select>
     <update id="updateMenu" parameterType="Menu">
     	update menu set menuName=#{menuName} where menuId=#{id}

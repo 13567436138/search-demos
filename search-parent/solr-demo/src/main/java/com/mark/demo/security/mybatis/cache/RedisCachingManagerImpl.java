@@ -1,20 +1,15 @@
 package com.mark.demo.security.mybatis.cache;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
-
+import com.mark.demo.security.utils.JedisUtils;
+import com.mark.demo.security.utils.PropertiesLoader;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.parsing.XNode;
 import org.apache.ibatis.parsing.XPathParser;
 
-import com.mark.demo.security.utils.JedisUtils;
-import com.mark.demo.security.utils.PropertiesLoader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class RedisCachingManagerImpl implements RedisCachingManager{
 	
@@ -43,9 +38,10 @@ public class RedisCachingManagerImpl implements RedisCachingManager{
 		for(String observable:set)
 		{
 			Set<String> relatedStatements = observers.get(observable);
-			for(String statementId:relatedStatements)
-			{
-				JedisUtils.del(MyBatisRedisCache.mybatis_cache_prefix+statementId);
+			if(relatedStatements!=null) {
+				for (String statementId : relatedStatements) {
+					JedisUtils.del(MyBatisRedisCache.mybatis_cache_prefix + statementId);
+				}
 			}
 		}
 	}

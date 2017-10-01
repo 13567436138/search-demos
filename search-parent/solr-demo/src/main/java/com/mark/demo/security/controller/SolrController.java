@@ -34,8 +34,8 @@ public class SolrController {
 
     @RequestMapping("/list/data")
     @ResponseBody
-    public PaginateResult<Article> listData(String key, Date date_start, Date date_end, Pagination pagination){
-        Pageable pageable=new PageRequest(pagination.getCurrentPage(),pagination.getPageSize());
+    public PaginateResult<Article> listData(String key, Pagination pagination){
+        Pageable pageable=new PageRequest(pagination.getCurrentPage()-1,pagination.getPageSize());
         Page<Article> ret=articleService.findByTitleOrContent(key,key,pageable);
         PaginateResult<Article> pageResult = new PaginateResult<Article>(pagination, ret.getContent());
         pageResult.setTotal(ret.getTotalElements());

@@ -36,6 +36,6 @@ public class ArticleServiceImpl extends GenericServiceImpl<Article> implements A
 
     @Override
     public Page<Article> findByTitleOrContent(String title, String content, Pageable pageable) {
-        return solrRepsitory.findByTitleOrContent(title,content,pageable);
+        return solrRepsitory.findByTitleLikeOrContentLike(title,content,pageable);
     }
 }

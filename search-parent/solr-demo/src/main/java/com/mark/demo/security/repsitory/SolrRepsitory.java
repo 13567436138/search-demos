@@ -9,5 +9,5 @@ import org.springframework.data.solr.repository.SolrCrudRepository;
  * Created by admin on 2017/9/30.
  */
 public interface SolrRepsitory extends SolrCrudRepository<Article,String> {
-    Page<Article> findByTitleOrContent(String title, String content, Pageable pageable);
+    Page<Article> findByTitleLikeOrContentLike(String title, String content, Pageable pageable);
 }

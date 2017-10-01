@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>solr-demo</module>
+        <module>elasticsearch-demo</module>
     </modules>
 
     <properties>

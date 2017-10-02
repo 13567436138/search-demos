@@ -287,6 +287,12 @@
                 <artifactId>spring-data-solr</artifactId>
                 <version>2.1.7.RELEASE</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-elasticsearch -->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-elasticsearch</artifactId>
+                <version>2.1.7.RELEASE</version>
+            </dependency>
 
         </dependencies>
 
@@ -358,7 +364,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <p.redis.master.host>192.168.198.128</p.redis.master.host>
+                <p.redis.master.host>192.168.198.131</p.redis.master.host>
                 <p.redis.master.port>7000</p.redis.master.port>
                 <p.redis.master.pass>none</p.redis.master.pass>
                 <p.jdbc.driver>com.mysql.jdbc.Driver</p.jdbc.driver>

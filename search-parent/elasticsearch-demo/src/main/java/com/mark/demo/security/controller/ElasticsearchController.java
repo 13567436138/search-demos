@@ -22,20 +22,23 @@ import java.util.Date;
  * Created by admin on 2017/9/30.
  */
 @Controller
-@RequestMapping("/admins/search/solr")
-public class SolrController {
+@RequestMapping("/admins/search/elasticsearch")
+public class ElasticsearchController {
     @Autowired
     private ArticleService articleService;
     @RequestMapping("/list")
     public String list(HttpServletResponse response){
         response.setHeader("X-Frame-Options","SAMEORIGHT");
-        return "admins/search/solr/list.ftl";
+        return "admins/search/elasticsearch/list.ftl";
     }
 
     @RequestMapping("/list/data")
     @ResponseBody
     public PaginateResult<Article> listData(String key, Pagination pagination){
         Pageable pageable=new PageRequest(pagination.getCurrentPage()-1,pagination.getPageSize());
+        if(key==null){
+            key="";
+        }
         Page<Article> ret=articleService.findByTitleOrContent(key,key,pageable);
         PaginateResult<Article> pageResult = new PaginateResult<Article>(pagination, ret.getContent());
         pageResult.setTotal(ret.getTotalElements());

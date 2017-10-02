@@ -1,25 +1,22 @@
 package com.mark.demo.security.entity;
 
 import com.mark.demo.security.base.GenericEntity;
-import org.apache.solr.client.solrj.beans.Field;
-import org.springframework.data.solr.core.mapping.Indexed;
-import org.springframework.data.solr.core.mapping.SolrDocument;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
 
 /**
  * Created by admin on 2017/9/30.
  */
-@SolrDocument(solrCoreName = "test")
+@Document(indexName = "idx_article2",type="article",createIndex = true)
 public class Article extends GenericEntity{
-    @Indexed
-    @Field("title")
+    @Field(type= FieldType.String,store = true,analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String title;
-    @Indexed
-    @Field("content")
+    @Field(type= FieldType.String,store = true,analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String content;
-    @Indexed
-    @Field("date")
+    @Field(type=FieldType.Date)
     private Date date;
 
     public String getTitle() {

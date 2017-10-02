@@ -3,11 +3,12 @@ package com.mark.demo.security.service.impl;
 import com.mark.demo.security.base.GenericServiceImpl;
 import com.mark.demo.security.entity.Article;
 import com.mark.demo.security.mapper.ArticleMapper;
-import com.mark.demo.security.repsitory.SolrRepsitory;
+import com.mark.demo.security.repsitory.ArticleRepsitory;
 import com.mark.demo.security.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,7 +21,9 @@ public class ArticleServiceImpl extends GenericServiceImpl<Article> implements A
     private ArticleMapper articleMapper;
 
     @Autowired
-    private SolrRepsitory solrRepsitory;
+    private ArticleRepsitory articleRepsitory;
+    @Autowired
+    private ElasticsearchOperations elasticsearchTemplate;
 
     @Autowired(required = true)
     public ArticleServiceImpl( ArticleMapper dao){
@@ -30,12 +33,12 @@ public class ArticleServiceImpl extends GenericServiceImpl<Article> implements A
 
     public int insert(Article article){
         int ret=super.insert(article);
-        solrRepsitory.save(article);
+        article=articleRepsitory.save(article);
         return ret;
     }
 
     @Override
     public Page<Article> findByTitleOrContent(String title, String content, Pageable pageable) {
-        return solrRepsitory.findByTitleLikeOrContentLike(title,content,pageable);
+        return articleRepsitory.findByTitleLikeOrContentLike(title,content,pageable);
     }
 }

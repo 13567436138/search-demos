@@ -1,11 +1,10 @@
 package com.mark.demo.security.base;
 
-import java.io.Serializable;
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 
-import com.google.common.collect.Lists;
+import java.io.Serializable;
+import java.util.List;
 
 
 public class Pagination implements Serializable {
@@ -34,7 +33,7 @@ public class Pagination implements Serializable {
     private Integer totalPage;
 
     //排序对象
-    private List<Sort> sorts;
+    private List<Sort> csorts;
     
     /**
      * 排序字段
@@ -115,12 +114,12 @@ public class Pagination implements Serializable {
      */
     public String getSortToString()
     {
-        if(CollectionUtils.isEmpty(sorts)){
+        if(CollectionUtils.isEmpty(csorts)){
             return "";
         }
         StringBuffer sb = new StringBuffer();
         int i = 0;
-        for (Sort sort : sorts)
+        for (Sort sort : csorts)
         {
             if(i == 0){
                 sb.append(sort.toString() + "," );
@@ -138,20 +137,20 @@ public class Pagination implements Serializable {
      * @return
      */
     public Sort getOneSort(){
-        if(CollectionUtils.isEmpty(sorts)){
+        if(CollectionUtils.isEmpty(csorts)){
             return null;
         }
-        return sorts.get(0);
+        return csorts.get(0);
     }
 
-    public void setSorts(Sort sort)
+    public void setCsorts(Sort sort)
     {
-        this.sorts = Lists.newArrayList(sort);
+        this.csorts = Lists.newArrayList(sort);
     }
     
     public void setSorts(List<Sort> sort)
     {
-        this.sorts = sort;
+        this.csorts = sort;
     }
 
     public String getOrderBy()

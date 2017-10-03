@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a552cbce-62b3-460e-95f8-1371f2f6fbba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_13_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/repsitory/ArticleRepsitory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/webapp/WEB-INF/ftl/admins/search/elasticsearch/list.ftl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/repsitory/SolrRepsitory.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/elasticsearch_demo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/elasticsearch_demo_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/elasticsearch-demo.iml" afterPath="$PROJECT_DIR$/elasticsearch-demo/elasticsearch-demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/pom.xml" afterPath="$PROJECT_DIR$/elasticsearch-demo/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/base/GenericEntity.java" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/base/GenericEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/base/Pagination.java" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/base/Pagination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/entity/Article.java" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/entity/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/service/impl/ArticleServiceImpl.java" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/service/impl/ArticleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/resources/spring-elasticsearch.xml" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/resources/spring-elasticsearch.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_elasticsearch_2_1_7_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_elasticsearch_2_1_6_RELEASE.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/controller/SolrController.java" afterPath="$PROJECT_DIR$/elasticsearch-demo/src/main/java/com/mark/demo/security/controller/ElasticsearchController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1641,7 +1625,7 @@
       <workItem from="1506833216089" duration="10682000" />
       <workItem from="1506854523627" duration="1722000" />
       <workItem from="1506898292742" duration="2935000" />
-      <workItem from="1506907010262" duration="18510000" />
+      <workItem from="1506907010262" duration="18894000" />
     </task>
     <task id="LOCAL-00001" summary="1111">
       <created>1506671965807</created>
@@ -1713,11 +1697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506910028874</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1111">
+      <created>1506946120490</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1506946120490</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52706000" />
+    <option name="totallyTimeSpent" value="53090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1934" height="1042" extended-state="0" />
@@ -1734,7 +1725,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3478261" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3478261" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1745,7 +1736,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4173913" sideWeight="0.49784017" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34056398" sideWeight="0.4929078" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34056398" sideWeight="0.4929078" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30520833" sideWeight="0.5070922" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
